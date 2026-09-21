@@ -1,3 +1,6 @@
+console.log(__filename);
+console.log(__dirname);
+
 var url = "http://mylogger.com/log";
 
 function log(message) {
