@@ -20,3 +20,17 @@
 // global.console.log; // instead of window we have global object in node
 // console.log(global.message) // It sends undefined in the terminal
 
+// Modules
+
+// var sayHello = function () {};
+
+// window.sayHello(); // when we define in javascript realworld we split code so it can be possible to overwrite
+// // we should avoid using variables and function in global scope
+// // Instead we use modules
+
+// console.log(module);
+
+//To load the module we use
+
+const log = require("./logger"); // const to problem with accidenlty changing it
+log("message");
