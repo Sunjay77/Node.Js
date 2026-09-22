@@ -32,5 +32,11 @@
 
 //To load the module we use
 
-const log = require("./logger"); // const to problem with accidenlty changing it
-log("message");
+// const log = require("./logger"); // const to problem with accidenlty changing it
+// log("message");
+
+// const path = require("path");
+
+// var pathObj = path.parse(__filename);
+
+// console.log(pathObj);
