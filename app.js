@@ -52,6 +52,19 @@
 // console.log(`Total Memory ${totalMemory}`);
 // console.log(`Free Memory ${freeMemory}`);
 
-const fs = require("fs");
-const files = fs.readdirSync("./");
-console.log(files);
+// const fs = require("fs");
+// const files = fs.readdirSync("./");
+// console.log(files);
+
+//Events Module
+
+const EventEmmiter = require(`events`); // class
+const emmiter = new EventEmmiter(); // Actual Object
+
+// Register a listener
+emmiter.on('messageLogged', function () {
+  console.log('listener called')
+})
+
+// Raise an Event
+emmiter.emit('message logged');// meaning signaling
