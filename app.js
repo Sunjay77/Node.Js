@@ -59,12 +59,14 @@
 //Events Module
 
 const EventEmmiter = require(`events`); // class
-const emmiter = new EventEmmiter(); // Actual Object
+// const emmiter = new EventEmmiter(); // Actual Object
 
+const Logger = require("./logger");
+const logger = new Logger();
 // Register a listener
-emmiter.on('messageLogged', function () {
-  console.log('listener called')
-})
+logger.on("messageLogged", (arg) => {
+  // some use e, eventArg
+  console.log("Listener called", arg);
+});
 
-// Raise an Event
-emmiter.emit('message logged');// meaning signaling
+logger.log("message");
